@@ -1,16 +1,28 @@
-html,
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu:wght@300;400;600&display=swap');
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  background: #f2f3f4;
+  width: 100vw;
+  overflow-x: hidden;
 }
 
-a {
-  color: inherit;
-  text-decoration: none;
+::-webkit-scrollbar {
+  width: 0.5rem;
+  background-color: transparent;
 }
 
-* {
-  box-sizing: border-box;
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-button {
+  display: none;
+}
+
+::-webkit-scrollbar-thumb {
+  margin-top: 1rem;
+  background: #f97316;
 }

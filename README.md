@@ -1,34 +1,64 @@
-This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+## Projeto Loja Acme Inc.
 
-## Getting Started
+### Intruções:
+Após clonar o repositório e ir para o seu diretório, deve-se baixar as dependências do projeto:
 
-First, run the development server:
+    yarn
 
-```bash
-npm run dev
-# or
-yarn dev
-```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+Para executá-lo em produção basta digitar o seguinte comando:
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+    yarn dev
 
-[API routes](https://nextjs.org/docs/api-routes/introduction) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+E por fim, acessar a url http://localhost:3000/
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/api-routes/introduction) instead of React pages.
+Caso deseje gerar um build:
 
-## Learn More
+    yarn build
 
-To learn more about Next.js, take a look at the following resources:
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+### Hospedagem:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js/) - your feedback and contributions are welcome!
+Este projeto está hospedado na Vercel. Ao realizar um commit & push, automaticamente é gerado uma nova build e deploy automaticamente pela Vercel.
 
-## Deploy on Vercel
+### Lista de tecnologias / dependências utilizadas:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Next.js
+- Typescript
+- Tailwind CSS
+- ESLint
+- Prettier
+-  Axios
+-  react-hot-toast
+- react-Icons
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/deployment) for more details.
+
+### Desafio:
+
+Projeto desenvolvido com o objetivo de atender as seguintes demandas:
+
+● Páginas:
+- Uma página inicial, que deverá mostrar uma lista de produtos da Acme;
+- Uma página do produto, que deverá ser acessada ao clicar em um desses
+produtos da tela inicial;
+- Uma página de “carrinho”, que pode ser acessada através de qualquer outra
+página do seu sistema;
+
+● Funcionalidades:
+ - Possibilidade de selecionarmos produtos como “favoritos”, em ambas as páginas.
+- Possibilidade de, na página inicial, filtrar produtos pelo status “favorito” ou pelo nome do produto
+- Possibilidade de adicionar e remover itens do carrinho (carrinho e favorito são duas coisas diferentes!)
+- Possibilidade de realizar o “checkout” do seu carrinho, o que deverá gerar um JSON com a lista de produtos que estavam no carrinho no momento do checkout e também trazer quaisquer informações da sessão do usuário que considere relevante.
+
+●  Produtos:
+ - Para este exercício, iremos utilizar uma biblioteca aberta que disponibiliza
+imagens geradas randomicamente. Para este fim, use a seguinte API aberta: [link](https://picsum.photos/).
+ - Você deverá garantir que a imagem dos itens não se altere ao longo da
+navegação em sua ferramenta.
+ - Para o conteúdo de cada item, como nome, descrição e valor unitário, segue a regra:
+ - Para nome do produto: Um conjunto de Verbo + Adjetivo gerado
+   aleatoriamente (sem repetir) seguindo as listas de verbos e adjetivos
+   presentes ao fim deste arquivo.
+- Para descrição: Um texto randômico de sua escolha de 20 a 500
+caracteres
+- Para valor, a seguinte pseudo-fórmula: 10 + nameLength * ((500 - descrLength) / (3 - nameLength))
